@@ -65,4 +65,26 @@ describe 'Tennis Scoring' do
     expect(subject.score).to eq ('Deuce')
   end
 
+  def deuce
+    3.times do
+      subject.player1point
+      subject.player2point
+    end
+  end
+
+  it 'Player 1 has advantage equal to "Advantage"' do
+    deuce
+    subject.player1point
+
+    expect(subject.score).to eq('Advantage player 1')
+  end
+
+  it 'Player 2 has advantage equal to "Advantage"' do
+
+    deuce
+    subject.player2point
+
+    expect(subject.score).to eq('Advantage player 2')
+  end
+
 end

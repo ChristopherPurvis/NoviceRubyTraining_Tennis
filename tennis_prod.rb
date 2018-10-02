@@ -22,6 +22,10 @@ class TennisGame
 
     if @player_1_points == 3 and @player_2_points == 3
       "Deuce"
+    elsif @player_1_points == 4 and @player_2_points == 3
+      "Advantage player 1"
+    elsif @player_2_points == 4 and @player_1_points == 3
+      "Advantage player 2"
     elsif @player_1_points == 4
       "Player 1 Wins a match"
     elsif @player_2_points == 4
